@@ -1,0 +1,39 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+/* 居中显示 */
+.container_center{
+  display: flex;
+  justify-content: center;
+}
+
+/* 等边距显示 */
+.container_between{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/*横向布局  */
+.layout_horizontal{
+  height: 100rpx;
+  display: flex;
+  /*row 横向  column 列表  */
+  flex-direction: row;
+}
+
+/*纵向布局  */
+.layout_vertical{
+  display: flex;
+  /*row 竖向  column 列表  */
+  flex-direction: column;
+}
+

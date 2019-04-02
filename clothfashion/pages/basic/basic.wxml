@@ -1,0 +1,19 @@
+<!--pages/basic/basic.wxml-->
+<view class='container'>
+  <view class='item-container' bindtap='read'>
+    读取
+  </view>
+  <view class='item-container' bindtap='up'>
+    上传
+  </view>
+  <view class='item-container' bindtap='down'>
+    下载
+  </view>
+
+  <view class='item-container'>
+    {{txt}}
+  </view>
+
+  <image class='item-container' src='{{imageurl}}'>
+  </image>
+</view>

@@ -1,0 +1,75 @@
+/* pages/main/main.wxss */
+
+
+/* 头 */
+.indexFixed{
+  position: fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  width: 100%;
+  height: 660rpx;
+  background-color: white;
+}
+.header_images {
+  height: 500rpx;
+  display: flex;
+  justify-items: center;
+}
+.header-text{
+  width: 50%;
+  padding: 20rpx;
+  font-size: 11px;
+}
+
+/* 部位 季节 */
+.filter-item{
+  height: 80rpx;
+  display: flex;
+  /*row 横向  column 列表  */
+  flex-direction: row;
+  background-color: rgba(200, 231, 149, 0.733);
+}
+.icon-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon-box-img {
+  display: flex;
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+
+/* 网格布局 数据列表 */
+.table {
+  display: grid;
+  width: 100%;
+  margin-top: 660rpx;
+  overflow-x: hidden;
+  /* 设置列、行大小 fr单位是等分分配列空间*/
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 200rpx 200rpx;
+  /* 有多余数据时，自动添加新行时默认行高为：200rpx */
+  grid-auto-rows: 200rpx;
+  /* 设置网格线大小 */
+  grid-gap: 10rpx;
+}
+.table-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccc;
+}
+
+/* 实现内容填充 */
+.table-img{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+
+

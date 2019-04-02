@@ -1,0 +1,17 @@
+/* pages/basic/basic.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400rpx;
+  padding:20rpx 30rpx;
+  margin: 30rpx;
+  border: 4rpx solid lightblue;
+}

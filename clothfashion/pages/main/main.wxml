@@ -1,0 +1,62 @@
+<!--pages/main/main.wxml-->
+<block>
+  <view class='layout_vertical'>
+    <view class='indexFixed'>
+
+      <!-- 图片集合 -->
+      <swiper class="header_images " indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+        <block wx:for="{{bannerdata.urls}}" >
+          <swiper-item>
+            <view class='container_center'>
+              <image mode="widthFix" style=" width:50%;background-color:black;" src="{{item}}" class="slide-image" />
+              <text class='header-text'>{{bannerdata.name}}</text>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+
+      <!-- 部位 -->
+      <view class='filter-item container_between'>
+        <view class='icon-box'>
+          <image class='icon-box-img' src='../image/shangyi.png'></image>
+          上衣
+        </view>
+        <view class='icon-box'>
+          <image class='icon-box-img' src='../image/xiayi.png'></image>
+          下衣
+        </view>
+        <view class='icon-box'>
+          <image class='icon-box-img' src='../image/erhuan.png'></image>
+          首饰
+        </view>
+      </view>
+      <!-- 季节 -->
+      <view class='filter-item container_between'>
+        <view class='icon-box'>
+          <image class='icon-box-img' src='../image/season/spring.png'></image>
+          春
+        </view>
+        <view class='icon-box'>
+          <image class='icon-box-img' src='../image/season/summer.png'></image>
+          夏
+        </view>
+        <view class='icon-box'>
+          <image class='icon-box-img' src='../image/season/autumn.png'></image>
+          秋
+        </view>
+        <view class='icon-box'>
+          <image class='icon-box-img' src='../image/season/winter.png'></image>
+          冬
+        </view>
+      </view>
+    </view>
+    <!-- 列表 -->
+    <view class="table ">
+      <block wx:for='{{mydata}}' wx:for-item="item" data-index='{{index}}'>
+        <view class='table-item'>
+          <image class='table-img' bindtap='itemClick' data-id='{{item}}' src='{{item.url[0]}}'></image>
+        </view>
+      </block>
+    </view>
+  </view>
+</block>
