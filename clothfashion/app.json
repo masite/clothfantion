@@ -5,12 +5,12 @@
     "pages/logs/logs",
     "pages/clothfashion/clothfashion",
     "pages/basic/basic"
-   
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
