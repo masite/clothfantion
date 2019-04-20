@@ -18,7 +18,8 @@
   <navigator url="../main/main?title=main" hover-class="navigator-hover">
     <button type="default">我的衣柜</button>
   </navigator>
-  <button bindtap='other'>
-    其他推荐
-  </button>
+  <navigator url="../cloths/cloths?title=cloths" hover-class="navigator-hover">
+    <button type="default">其他推荐</button>
+  </navigator>
+  
 </view>

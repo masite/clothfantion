@@ -1,0 +1,26 @@
+/* pages/cloths/cloths.wxss */
+/* 网格布局 数据列表 */
+.table {
+  display: grid;
+  width: 100%;
+  overflow-x: hidden;
+  /* 设置列、行大小 fr单位是等分分配列空间*/
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 200rpx 200rpx;
+  /* 有多余数据时，自动添加新行时默认行高为：200rpx */
+  grid-auto-rows: 200rpx;
+  /* 设置网格线大小 */
+  grid-gap: 10rpx;
+}
+.table-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccc;
+}
+/* 实现内容填充 */
+.table-img{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}

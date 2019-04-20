@@ -1,0 +1,9 @@
+<!--pages/cloths/cloths.wxml-->
+<!-- 列表 -->
+    <view class="table">
+      <block wx:for='{{mydata}}' wx:for-item="item" data-index='{{index}}'>
+        <view class='table-item'>
+          <image class='table-img' bindtap='itemClick' data-id='{{item}}' src='{{item.url[0]}}'></image>
+        </view>
+      </block>
+    </view>

@@ -3,10 +3,9 @@
     "pages/newday/newday",
     "pages/main/main",
     "pages/index/index",
+    "pages/basic/basic",
     "pages/logs/logs",
-    "pages/clothfashion/clothfashion",
-    "pages/basic/basic"
-    
+    "pages/cloths/cloths"
   ],
   "window": {
     "backgroundTextStyle": "light",
