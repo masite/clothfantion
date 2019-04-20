@@ -5,48 +5,66 @@
 
       <!-- 图片集合 -->
       <swiper class="header_images " indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
-        <block wx:for="{{bannerdata.urls}}" >
+        <block wx:for="{{bannerdata.urls}}">
           <swiper-item>
             <view class='container_center'>
               <image mode="widthFix" style=" width:50%;background-color:black;" src="{{item}}" class="slide-image" />
-              <text class='header-text'>{{bannerdata.name}}</text>
             </view>
           </swiper-item>
         </block>
       </swiper>
+      <!-- <view class='header-text'>{{bannerdata.name}}</view> -->
 
       <!-- 部位 -->
       <view class='filter-item container_between'>
-        <view class='icon-box'>
-          <image class='icon-box-img' src='../image/shangyi.png'></image>
-          上衣
+        <view class='icon-box' bindtap='upClick' data-id='{{filter}}'>
+          <!-- <image class='icon-box-img' src='../image/shangyi.png'></image> -->
+           <image class='icon-box-img' src="{{filter.clothType == 1?'../image/season/spring-select.png':'../image/season/spring.png'}}"></image>
+          <view class='{{filter.clothType == 1?"text-green":"text-grey"}}'>
+            上衣
+          </view>
         </view>
-        <view class='icon-box'>
-          <image class='icon-box-img' src='../image/xiayi.png'></image>
-          下衣
+        <view class='icon-box' bindtap='downClick' data-id='{{filter}}'>
+          <!-- <image class='icon-box-img' src='../image/xiayi.png'></image> -->
+           <image class='icon-box-img' src="{{filter.clothType == 2?'../image/season/spring-select.png':'../image/season/spring.png'}}"></image>
+          <view class='{{filter.clothType == 2?"text-green":"text-grey"}}'>
+            下衣
+          </view>
         </view>
-        <view class='icon-box'>
-          <image class='icon-box-img' src='../image/erhuan.png'></image>
-          首饰
+        <view class='icon-box' bindtap='outherClick' data-id='{{filter}}'>
+          <!-- <image class='icon-box-img' src='../image/erhuan.png'></image> -->
+           <image class='icon-box-img' src="{{filter.clothType == 3?'../image/season/spring-select.png':'../image/season/spring.png'}}"></image>
+          <view class='{{filter.clothType == 3?"text-green":"text-grey"}}'>
+            配饰
+          </view>
         </view>
       </view>
       <!-- 季节 -->
       <view class='filter-item container_between'>
-        <view class='icon-box'>
-          <image class='icon-box-img' src='../image/season/spring.png'></image>
-          春
+        <view class='icon-box' bindtap='springClick' data-id='{{filter}}'>
+          <image class='icon-box-img' src="{{filter.season == 1?'../image/season/spring-select.png':'../image/season/spring.png'}}"></image>
+
+          <view class='{{filter.season == 1?"text-green":"text-grey"}}'>
+            春
+          </view>
         </view>
-        <view class='icon-box'>
-          <image class='icon-box-img' src='../image/season/summer.png'></image>
-          夏
+        <view class='icon-box' bindtap='summerClick' data-id='{{filter}}'>
+          <image class='icon-box-img' src="{{filter.season == 2?'../image/season/summer-select.png':'../image/season/summer.png'}}"></image>
+          <view class='{{filter.season == 2?"text-green":"text-grey"}}'>
+            夏
+          </view>
         </view>
-        <view class='icon-box'>
-          <image class='icon-box-img' src='../image/season/autumn.png'></image>
-          秋
+        <view class='icon-box' bindtap='autumnClick' data-id='{{filter}}'>
+          <image class='icon-box-img' src="{{filter.season == 3?'../image/season/autumn-select.png':'../image/season/autumn.png'}}"></image>
+          <view class='{{filter.season == 3?"text-green":"text-grey"}}'>
+            秋
+          </view>
         </view>
-        <view class='icon-box'>
-          <image class='icon-box-img' src='../image/season/winter.png'></image>
-          冬
+        <view class='icon-box' bindtap='winterClick' data-id='{{filter}}'>
+          <image class='icon-box-img' src="{{filter.season == 4?'../image/season/winter-select.png':'../image/season/winter.png'}}"></image>
+          <view class='{{filter.season == 4?"text-green":"text-grey"}}'>
+            冬
+          </view>
         </view>
       </view>
     </view>
