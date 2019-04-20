@@ -1,0 +1,23 @@
+/* pages/newday/newday.wxss */
+/* 头 */
+.indexFixed{
+  position: fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  width: 100%;
+  height: 660rpx;
+  background-color: white;
+}
+.header_images {
+  height: 500rpx;
+  display: flex;
+  justify-items: center;
+}
+.header-text{
+  width: 100%;
+  height: 60rpx;
+  font-size: 11px;
+  text-align: center;
+  line-height: 60rpx;
+}
