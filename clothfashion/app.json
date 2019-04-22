@@ -5,7 +5,8 @@
     "pages/index/index",
     "pages/basic/basic",
     "pages/logs/logs",
-    "pages/cloths/cloths"
+    "pages/cloths/cloths",
+    "pages/clothdetail/clothdetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

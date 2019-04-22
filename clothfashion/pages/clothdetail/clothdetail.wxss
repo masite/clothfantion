@@ -1,0 +1,24 @@
+/* pages/clothdetail/clothdetail.wxss */
+
+.header_images {
+  height: 750rpx;
+  display: flex;
+  justify-items: center;
+}
+
+/* 头 */
+.indexFixed{
+  position: fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  width: 100%;
+  height: 750rpx;
+  background-color: white;
+}
+
+.dec-container{
+  margin-top: 750rpx;
+}
+
+

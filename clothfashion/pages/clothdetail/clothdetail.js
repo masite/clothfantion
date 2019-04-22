@@ -1,4 +1,4 @@
-// pages/cloths/cloths.js
+// pages/clothdetail/clothdetail.js
 var datasource = require('../../utils/data')
 Page({
 
@@ -6,28 +6,35 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // 列表数据
-    mydata: [
-
-    ]
+    // 配置banner
+    indicatorDots: true,
+    autoplay: true,
+    interval: 2000,
+    duration: 1000,
+    // 轮播图
+    bannerdata: {
+      name: '',
+      urls: []
+    },
+    dec:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var source = datasource.getUpSpringData()
-    console.log('==== source', source);
-    this.setData({
-      mydata: source
-    })
-  },
 
-  itemClick: function(e){
-    var item = e.currentTarget.dataset.id;
-    console.log('==== itemClick', item);
-    wx.navigateTo({
-      url: '../clothdetail/clothdetail?id=' + item.id + "&dec=" +item.name
+    console.log('==== onLoad', options.id);
+
+    var urls = datasource.getBannerData()
+    // 配置banner数据
+    var ban = this.data.bannerdata
+
+    ban.urls = urls
+    ban.name = '每日推荐'
+    this.setData({
+      bannerdata: ban,
+      dec: options.dec
     })
   },
 

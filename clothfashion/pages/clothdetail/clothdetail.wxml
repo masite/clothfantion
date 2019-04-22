@@ -1,0 +1,17 @@
+<!--pages/clothdetail/clothdetail.wxml-->
+<!-- 图片集合 -->
+
+<view class='layout_vertical'>
+  <swiper class="header_images indexFixed" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{bannerdata.urls}}" wx:key="url">
+      <swiper-item>
+        <view class='container_center'>
+          <image mode="widthFix" style=" width:50%;background-color:black;" src="{{item}}" class="slide-image" />
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='text-center dec-container'>
+    {{dec}}
+  </view>
+</view>

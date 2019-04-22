@@ -37,3 +37,19 @@
   flex-direction: column;
 }
 
+/* 文本居中 */
+.header-text{
+  width: 100%;
+  height: 60rpx;
+  font-size: 11px;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+/* 不限制高度的文本居中 */
+.text-center{
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+  line-height: 60rpx;
+}
